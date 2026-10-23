@@ -1,0 +1,7 @@
+- insert:
+    - id: goal-unlimited
+      name: dsh-goal-unlimited
+# New goals start without a practical round cap; goal-unlimited also lifts caps set explicitly.
+- id: goal
+  config:
+    defaultMaxGoalRounds: 9007199254740991

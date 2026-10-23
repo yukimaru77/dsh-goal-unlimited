@@ -1,0 +1,33 @@
+{
+  "name": "dsh-goal-unlimited",
+  "version": "0.1.0-local",
+  "private": true,
+  "type": "module",
+  "description": "Remove the round cap from DeepSeek Harness goals",
+  "license": "MIT",
+  "engines": {
+    "node": "^22.19 || >=24"
+  },
+  "exports": {
+    ".": "./index.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": [
+        "./cordis.patch.yml"
+      ]
+    }
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-goal": "0.2.1-rc.2"
+  }
+}
